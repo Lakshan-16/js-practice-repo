@@ -342,34 +342,211 @@
 // 1.push 
 // 1.pop 
 
-// exaple 
-let veg =["carrot","tomato","onion","potato","dragon fruit"];
-console.log(veg);
-// if we want to push element to the end 
-veg.push("papaya");
-console.log(veg);
-// if we want to pop element form the end 
-veg .pop(); // this will pop papaya 
-console.log(veg);
+// // exaple 
+// let veg =["carrot","tomato","onion","potato","dragon fruit"];
+// console.log(veg);
+// // if we want to push element to the end 
+// veg.push("papaya");
+// console.log(veg);
+// // if we want to pop element form the end 
+// veg .pop(); // this will pop papaya 
+// console.log(veg);
 
-// push multiple items 
-veg.push("apple", "orange","banana");
-console.log(veg);
+// // push multiple items 
+// veg.push("apple", "orange","banana");
+// console.log(veg);
 
-// toString method converts array to string 
-console.log(veg.toString());
-// concat() joins multiple arrays and returns the combined arry and does no changes in the actual array 
+// // toString method converts array to string 
+// console.log(veg.toString());
+// // concat() joins multiple arrays and returns the combined arry and does no changes in the actual array 
 
-let marvel= ["iron man", "spider man" ," thor", " captian america" ];
-let dc =["super man","bat man","shazam ","Aqua man"];
-console.log(marvel);
-console.log(dc);
-console.log(marvel.concat(dc));
+// let marvel= ["iron man", "spider man" ," thor", " captian america" ];
+// let dc =["super man","bat man","shazam ","Aqua man"];
+// console.log(marvel);
+// console.log(dc);
+// console.log(marvel.concat(dc));
 
-// unshift() similar to push but addes element in starting 
-marvel.unshift("Ant man")
-console.log(marvel);
+// // unshift() similar to push but addes element in starting 
+// marvel.unshift("Ant man")
+// console.log(marvel);
 
-// shift() this is similar to pop but deletes element from 
-console.log(" deleted", dc.shift());
-console.log(" new dc arrya is ",dc);
+// // shift() this is similar to pop but deletes element from 
+// console.log(" deleted", dc.shift());
+// console.log(" new dc arrya is ",dc);
+
+// //  slice() method is similar to that in strings // used for slicing the part of array // end index is non - inclusive 
+// // will not modify original arry 
+// console.log(marvel.slice(1,4));
+
+// // splice() method // modifies the original array // to remove // to add // to modify the original array
+// // splice (start index, delete count , new element );// the new elemtent if we add , its added to the start index
+// // if we dont want to delete anyting then delete count =0 // this will add new element in the start index you choose 
+// marvel.splice(2,0,"doctor strange"); // add element at 2
+// console.log(marvel);
+// marvel.splice(2,3,"hulk"); //add element at 2 and delete 3 elements after 2 
+// console.log(marvel);
+// marvel.splice(2,1,"falcon");// relace the element at 2 with new element 
+
+// function sum(a,b){
+//     console.log(a+b);
+// }
+// sum(19,99);
+
+// function add(a,b){
+//     return a+b;
+// }
+// console.log(add(19,99));
+
+// Arrow fuctions  in modern JS
+// (a,b) => {
+//     console.log(a+b);
+// }
+
+// const arrowSum = (a,b) => {
+//     console.log(a+b);
+// }
+
+// console.log(arrowSum); // prints the body
+// console.log(arrowSum(4443,283));
+
+// let arrowMul =( a, b)=>{
+//     return a*b;
+// }
+
+// console.log(arrowMul);
+// console.log(arrowMul(39,282));
+// // ---------------------------------------------------------------------
+// function vovels(str){
+//     let count =0;
+//     let vov = "aeiou";
+//     let count =0;
+// for ( let c of str){
+//     if(c==="a"||c==="e"||c==="i"||c==="o"||c==="u"){
+//         count++;
+//     }
+// }
+// return count;
+// }
+
+
+// let str ="Lakshan";
+// console.log(`number of vovels in ${str} is ${vovels(str)}`);
+// // ----------------------------------------------------------
+
+// const arrowVovel = (str) =>{
+
+// let count =0;
+// for ( let c of str){
+//     if(c==="a"||c==="e"||c==="i"||c==="o"||c==="u"){
+//         count++;
+//     }
+// }
+// return count;
+// }
+// let str = "Lakshan";
+// console.log(`in ${str} we have ${arrowVovel(str)} number of vovels`);
+
+// arr.forEach(callbackfunciton ) // this is a method used for arrays  
+
+// function abc(){
+//     console.log("hello");
+// }
+
+// function myFunc(abc){
+
+//     return abc;
+
+// }
+
+
+// // callback is afunction that has been passed as an argument to another function 
+// the body of the function is being passed as an parameter ot the forEach function 
+
+
+// let arr =[38,93,33,1,54,8];
+// arr.forEach(function printVal(val){//here val is value at each index
+//     console.log(val);
+
+// });
+
+//  generally inside callback function we pass ArrowFunciton as the parameter 
+
+// let arr =["pune","bangalore","mangalore","mumbai","delhi"];
+// arr.forEach((val, i,arr) =>{   // by default in forEach funciton we have 3 parameters , value , index and the ' array-it-self '
+//     console.log(val.toUpperCase(),i,arr); 
+// })
+
+// HIGHER ORDER FUCITON  = are those funciton which take other funtion as its parameter or it is returning other funtion 
+
+// arr.forEach() method in JS is a higher order funtion and also an higher order method 
+//  practice :
+// . For a given array of numbers, print the square of each value using the forEach loop.
+
+// let arr =[1,2,3,4,5,6,7];
+// //forEach method performs a perticualar set of operations for each elements in the array 
+// arr.forEach((num) => {
+//     console.log(num**2);
+// });
+
+// arr.map() its a callback function
+
+// let arr =[1,2,3,4,5,6,7];
+// arr.map((val)=>{
+//     console.log(val);
+// });
+
+// let newArr = arr.map(( val)=>{
+//     return val**2;
+// })
+// console.log(newArr);
+
+// arr.filter() it is a funtion used for filtering the array upon some condition 
+// the new array contains a filtered elements 
+
+// let arr =[1,2,3,4,5,6,7];
+// let evenArr = arr.filter((num)=>{
+//     return num%2===0;  // if the condition is true then it returns true to the filter () and then it will include that element in the new array
+// });
+// console.log(evenArr);
+
+
+// arr.reduce(); this is a callback method which takes funtion as input and gives array elements as input to that funtion 
+//and then performs some operation and reduces the array to a single value , and then returns the single value 
+// let arr =[1,2,3,4,5,6,7];
+// let output = arr.reduce((res,curr)=>{
+//     return res+curr;
+// });
+// console.log(output);
+
+// let num =[1,2,3,4,5,6,7];
+// let large = num.reduce((prev,curr)=>{
+//     return prev>curr ? prev:curr;
+// });
+// console.log(large);
+
+// We are given array of marks of students. Filter our of the marks of students that scored 90+
+
+// let marks =[ 99,28,22,100,93,84,23,84,88,74,60,90,89,98,100];
+// let highScore = marks.filter((ele)=>{
+//     return ele>90;
+// });
+// console.log(marks);
+// console.log(highScore);
+
+// Take a number n as input from user. Create an array of numbers from 1 to n
+// Use the reduce method to calculate sum of all numbers in the array.
+// Use the reduce method to calculate product of all numbers in the array.
+
+// let num =prompt("user enter a number ");
+// let arr =[];
+// for(let i=0;i<num;i++){
+//     arr[i]=i+1;gi
+// }
+// let sum = arr.reduce((prev,curr)=>{
+//     return prev+curr;
+// });
+
+// let pro = arr.reduce((prev,curr)=>{
+//     return prev*curr;
+// });
+// console.log(`sum =${sum} and product =${pro}`);
