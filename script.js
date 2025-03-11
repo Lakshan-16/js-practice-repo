@@ -540,7 +540,7 @@
 // let num =prompt("user enter a number ");
 // let arr =[];
 // for(let i=0;i<num;i++){
-//     arr[i]=i+1;gi
+//     arr[i]=i+1;
 // }
 // let sum = arr.reduce((prev,curr)=>{
 //     return prev+curr;
